@@ -131,7 +131,10 @@ article {
 
 
 /* inicio css skills*/
-article#skills {
+article#skills h2 {
+  padding-bottom: 20px;
+}
+div#painel-skills {
   display: grid;
   grid-template-rows: auto;
   gap: 20px;
@@ -139,6 +142,7 @@ article#skills {
 
 article#skills div.skill {
   font-weight: bold;
+  margin-bottom: 20px;
 
   display: flex;
   flex-flow: row wrap;
@@ -171,19 +175,9 @@ article#skills div.skill div.barra div.progresso-barra {
   position: absolute;
 }
 
-div#progresso-70 {
-  width: 70%;
-}
-div#progresso-50 {
-  width: 50%;
-}
-div#progresso-80 {
-  width: 80%;
-}
-
 @media screen and (min-width: 768px) {
 
-  article#skills {
+  div#painel-skills {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -199,6 +193,46 @@ article#formação {
 
 article#formação div.formação {
   background-color: var(--fundo-principal);
-  padding: 0px 20px;
   border-radius: 7px;
+  cursor: pointer;
+
+  .detalhe-azul {
+        transition: background-color 0.5s, width 0.5s;
+  }
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+article#formação div.formação:hover {
+  .detalhe-azul {
+    width: 20px;
+    background-color: var(--destaque);
+  }
+}
+
+article#formação .detalhe-azul {
+  background-color: var(--destaque-inverso);
+  width: 5px;
+  height: 100%;
+  border-radius: 7px 0px 0px 7px;
+}
+article#formação .info-formação {
+  margin: 0px 15px;
+}
+
+article#formação .info-formação .info-formação1 {
+  color: var(--texto);
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+article#formação .info-formação .info-formação2 {
+  color: var(--destaque-inverso);
+  font-weight: bold;
+}
+
+article#formação .info-formação .info-formação3 {
+  color: var(--texto);
 }
