@@ -188,3 +188,17 @@ div#progresso-80 {
   }
 }
 /*fim css skills*/
+
+/* inicio css formação*/
+article#formação {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 20px;
+  color: var(--texto);
+}
+
+article#formação div.formação {
+  background-color: var(--fundo-principal);
+  padding: 0px 20px;
+  border-radius: 7px;
+}
