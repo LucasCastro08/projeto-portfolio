@@ -128,3 +128,63 @@ article {
   margin-bottom: 20px;
   border-radius: 8px;
 }
+
+
+/* inicio css skills*/
+article#skills {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+article#skills div.skill {
+  font-weight: bold;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+article#skills span.nome-skill {
+  color: var(--texto);
+}
+
+article#skills span.porcentagem-barra {
+  color: var(--destaque);
+}
+
+article#skills div.skill div.barra {
+  background-color: var(--fundo-principal);
+  width: 100%;
+  height: 7px;
+  border-radius: 7px;
+
+  display: inline-block;
+  position: relative;
+}
+
+article#skills div.skill div.barra div.progresso-barra {
+  background-color: var(--destaque-inverso);
+  height: 7px;
+  border-radius: 7px;
+
+  position: absolute;
+}
+
+div#progresso-70 {
+  width: 70%;
+}
+div#progresso-50 {
+  width: 50%;
+}
+div#progresso-80 {
+  width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+
+  article#skills {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*fim css skills*/
