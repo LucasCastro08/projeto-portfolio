@@ -30,6 +30,15 @@ body {
   color: var(--texto);
 }
 
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444 ;
+}
+
 header {
   background-color: var(--destaque);
   color: var(--texto);
@@ -258,18 +267,19 @@ article#projetos h2 {
   margin-bottom: 10px;
   border-radius: 7px;
 }
-.projeto-item > img:hover {
-  cursor: pointer;
-}
 
-.projeto-item .projeto-ano, .projeto.nome, .projeto-des {
+.projeto-item .projeto-ano, .projeto-nome, .projeto-des {
   color: var(--texto);
+  text-decoration: none;
 }
 .projeto-item .projeto-ano {
   font-size: 0.9em;
 }
 .projeto-item .projeto-nome {
   font-weight: bold;
+}
+.projeto-item .projeto-nome:hover {
+  color: var(--destaque);
 }
 
 /*fim css projetos*/
